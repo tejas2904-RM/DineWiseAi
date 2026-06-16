@@ -1,0 +1,12 @@
+{
+  "test-user-1": [
+    {
+      "restaurantId": "rest-001",
+      "name": "Test Cafe",
+      "cuisine": "Italian",
+      "rating": 4.5,
+      "estimatedCost": 700.0,
+      "addedAt": "2026-05-17T06:27:05.572738+00:00"
+    }
+  ]
+}

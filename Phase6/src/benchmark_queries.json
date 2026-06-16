@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Indiranagar medium budget",
+    "location": "Indiranagar",
+    "budget": "medium",
+    "cuisine": "any",
+    "minRating": 4.0,
+    "tags": [],
+    "topK": 5,
+    "expected_location": "indiranagar"
+  },
+  {
+    "name": "Bellandur medium budget",
+    "location": "Bellandur",
+    "budget": "medium",
+    "cuisine": "any",
+    "minRating": 4.0,
+    "tags": [],
+    "topK": 5,
+    "expected_location": "bellandur"
+  },
+  {
+    "name": "Whitefield high budget",
+    "location": "Whitefield",
+    "budget": "high",
+    "cuisine": "any",
+    "minRating": 4.0,
+    "tags": [],
+    "topK": 5,
+    "expected_location": "whitefield"
+  },
+  {
+    "name": "Koramangala low budget",
+    "location": "Koramangala",
+    "budget": "low",
+    "cuisine": "any",
+    "minRating": 3.5,
+    "tags": [],
+    "topK": 5,
+    "expected_location": "koramangala"
+  },
+  {
+    "name": "Bangalore Italian medium",
+    "location": "Bangalore",
+    "budget": "medium",
+    "cuisine": "italian",
+    "minRating": 4.0,
+    "tags": [],
+    "topK": 5,
+    "expected_location": "bangalore"
+  },
+  {
+    "name": "BTM low budget",
+    "location": "BTM",
+    "budget": "low",
+    "cuisine": "any",
+    "minRating": 3.5,
+    "tags": [],
+    "topK": 5,
+    "expected_location": "btm"
+  },
+  {
+    "name": "HSR Layout high budget Asian",
+    "location": "HSR Layout",
+    "budget": "high",
+    "cuisine": "asian",
+    "minRating": 4.0,
+    "tags": [],
+    "topK": 5,
+    "expected_location": "hsr layout"
+  },
+  {
+    "name": "JP Nagar medium budget pizza",
+    "location": "JP Nagar",
+    "budget": "medium",
+    "cuisine": "pizza",
+    "minRating": 4.0,
+    "tags": [],
+    "topK": 5,
+    "expected_location": "jp nagar"
+  }
+]

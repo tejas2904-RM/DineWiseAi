@@ -1,0 +1,118 @@
+{
+  "summary": {
+    "total_queries": 8,
+    "successful": 8,
+    "errors": 0,
+    "fallback_count": 3,
+    "fallback_rate": 0.375,
+    "avg_latency_ms": 24678.0,
+    "avg_precision": 0.625,
+    "avg_rating": 3.32
+  },
+  "results": [
+    {
+      "name": "Indiranagar medium budget",
+      "status": "ok",
+      "latency_ms": 23590,
+      "used_fallback": false,
+      "recommendation_count": 5,
+      "relevance": {
+        "precision": 1.0,
+        "matched": 5,
+        "total": 5,
+        "avg_rating": 4.76
+      }
+    },
+    {
+      "name": "Bellandur medium budget",
+      "status": "ok",
+      "latency_ms": 3412,
+      "used_fallback": false,
+      "recommendation_count": 5,
+      "relevance": {
+        "precision": 1.0,
+        "matched": 5,
+        "total": 5,
+        "avg_rating": 4.36
+      }
+    },
+    {
+      "name": "Whitefield high budget",
+      "status": "ok",
+      "latency_ms": 78212,
+      "used_fallback": true,
+      "recommendation_count": 5,
+      "relevance": {
+        "precision": 1.0,
+        "matched": 5,
+        "total": 5,
+        "avg_rating": 4.48
+      }
+    },
+    {
+      "name": "Koramangala low budget",
+      "status": "ok",
+      "latency_ms": 11795,
+      "used_fallback": false,
+      "recommendation_count": 4,
+      "relevance": {
+        "precision": 1.0,
+        "matched": 4,
+        "total": 4,
+        "avg_rating": 3.95
+      }
+    },
+    {
+      "name": "Bangalore Italian medium",
+      "status": "ok",
+      "latency_ms": 2055,
+      "used_fallback": true,
+      "recommendation_count": 0,
+      "relevance": {
+        "precision": 0.0,
+        "matched": 0,
+        "total": 0,
+        "avg_rating": 0.0
+      }
+    },
+    {
+      "name": "BTM low budget",
+      "status": "ok",
+      "latency_ms": 57126,
+      "used_fallback": false,
+      "recommendation_count": 5,
+      "relevance": {
+        "precision": 1.0,
+        "matched": 5,
+        "total": 5,
+        "avg_rating": 4.46
+      }
+    },
+    {
+      "name": "HSR Layout high budget Asian",
+      "status": "ok",
+      "latency_ms": 2047,
+      "used_fallback": true,
+      "recommendation_count": 0,
+      "relevance": {
+        "precision": 0.0,
+        "matched": 0,
+        "total": 0,
+        "avg_rating": 0.0
+      }
+    },
+    {
+      "name": "JP Nagar medium budget pizza",
+      "status": "ok",
+      "latency_ms": 19187,
+      "used_fallback": false,
+      "recommendation_count": 5,
+      "relevance": {
+        "precision": 0.0,
+        "matched": 0,
+        "total": 5,
+        "avg_rating": 4.54
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "total_input_records": 19511,
+  "clean_records": 9212,
+  "rejected_records": 10299,
+  "duplicate_ids": 0,
+  "missing_by_column": {
+    "id": 0,
+    "name": 0,
+    "location": 0,
+    "cuisine": 0,
+    "avg_cost_for_two": 0,
+    "rating": 0,
+    "budget_band": 0
+  },
+  "rating_summary": {
+    "min": 1.8,
+    "max": 4.9,
+    "mean": 3.6272253582283978
+  }
+}

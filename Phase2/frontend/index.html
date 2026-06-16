@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phase2 - Preference Capture</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Restaurant Recommendations</h1>
+      <p class="subtitle">Phase 2: Preference Capture and Validation</p>
+
+      <form id="prefForm" novalidate>
+        <label>
+          Location
+          <input id="location" name="location" type="text" placeholder="Bangalore" />
+          <small class="error" data-error-for="location"></small>
+        </label>
+
+        <label>
+          Budget
+          <select id="budget" name="budget">
+            <option value="">Select budget</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <small class="error" data-error-for="budget"></small>
+        </label>
+
+        <label>
+          Cuisine
+          <input id="cuisine" name="cuisine" type="text" placeholder="Italian" />
+          <small class="error" data-error-for="cuisine"></small>
+        </label>
+
+        <label>
+          Minimum Rating (0 to 5)
+          <input id="minRating" name="minRating" type="number" min="0" max="5" step="0.1" value="4.0" />
+          <small class="error" data-error-for="minRating"></small>
+        </label>
+
+        <label>
+          Additional Preferences (comma separated)
+          <input id="tags" name="tags" type="text" placeholder="family-friendly, quick-service" />
+        </label>
+
+        <div class="actions">
+          <button id="submitBtn" type="submit">Get Recommendations</button>
+          <button id="retryBtn" type="button" class="secondary hidden">Retry</button>
+        </div>
+      </form>
+
+      <section class="status">
+        <p id="statusText">Fill preferences and submit.</p>
+      </section>
+
+      <section>
+        <pre id="resultBox"></pre>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

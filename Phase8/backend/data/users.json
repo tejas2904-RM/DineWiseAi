@@ -1,0 +1,20 @@
+{
+  "test-user-1": {
+    "userId": "test-user-1",
+    "name": "",
+    "email": null,
+    "createdAt": "2026-05-17T06:26:55.161255+00:00"
+  },
+  "user-e4kct780": {
+    "userId": "user-e4kct780",
+    "name": "",
+    "email": null,
+    "createdAt": "2026-05-17T06:27:34.375630+00:00"
+  },
+  "user-8qsg8rot": {
+    "userId": "user-8qsg8rot",
+    "name": "",
+    "email": null,
+    "createdAt": "2026-06-16T18:47:23.040083+00:00"
+  }
+}

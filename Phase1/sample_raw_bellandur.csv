@@ -1,0 +1,11 @@
+id,name,location,cuisine,avg_cost_for_two,rating,tags
+b1,Olive Bistro,Bellandur,Italian,1800,4.4,"family-friendly,quick-service"
+b2,Coastal Spoon,Bellandur,Seafood,2000,4.2,"family-friendly"
+b3,Pasta Factory,Bellandur,Italian,1600,4.1,"quick-service"
+b4,Spice Courtyard,Bellandur,North Indian,1200,4.3,"family-friendly"
+b5,Wok Garden,Bellandur,Chinese,1500,4.0,"quick-service"
+b6,Urban Grill,Bellandur,Continental,2200,4.5,"romantic"
+b7,Cafe Verde,Bellandur,Italian,1900,4.6,"family-friendly"
+b8,Biryani Hub,Bellandur,North Indian,900,4.1,"quick-service"
+b9,South Spice,Bellandur,South Indian,1100,3.9,"family-friendly"
+b10,The Lakeview Kitchen,Bellandur,Multi Cuisine,2000,4.3,"family-friendly,quick-service"

@@ -1,0 +1,255 @@
+openapi: 3.0.3
+info:
+  title: Restaurant Recommendation API
+  version: 0.1.0
+  description: Phase 0 contract draft for AI-powered restaurant recommendations.
+servers:
+  - url: https://api.example.com
+    description: Production
+  - url: https://staging-api.example.com
+    description: Staging
+  - url: http://localhost:8000
+    description: Local development
+
+tags:
+  - name: Recommendations
+  - name: Feedback
+  - name: Health
+
+paths:
+  /recommendations:
+    post:
+      tags: [Recommendations]
+      summary: Get ranked restaurant recommendations
+      operationId: createRecommendations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RecommendationRequest"
+      responses:
+        "200":
+          description: Recommendations generated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RecommendationResponse"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "429":
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Unexpected server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "503":
+          description: Upstream provider unavailable (fallback may be applied)
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /feedback:
+    post:
+      tags: [Feedback]
+      summary: Submit recommendation quality feedback
+      operationId: submitFeedback
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FeedbackRequest"
+      responses:
+        "202":
+          description: Feedback accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AcceptedResponse"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /health:
+    get:
+      tags: [Health]
+      summary: Health check endpoint
+      operationId: getHealth
+      responses:
+        "200":
+          description: Service healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status, timestamp]
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  timestamp:
+                    type: string
+                    format: date-time
+
+components:
+  schemas:
+    RecommendationRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - location
+        - budget
+        - cuisine
+        - minRating
+      properties:
+        location:
+          type: string
+          minLength: 2
+          maxLength: 80
+          example: Bangalore
+        budget:
+          type: string
+          enum: [low, medium, high]
+        cuisine:
+          type: string
+          minLength: 2
+          maxLength: 50
+          example: Italian
+        minRating:
+          type: number
+          minimum: 0
+          maximum: 5
+          example: 4.0
+        tags:
+          type: array
+          maxItems: 10
+          items:
+            type: string
+            minLength: 2
+            maxLength: 40
+          example: [family-friendly, quick-service]
+        topK:
+          type: integer
+          minimum: 1
+          maximum: 20
+          default: 5
+        language:
+          type: string
+          default: en
+          example: en
+
+    RecommendationItem:
+      type: object
+      required:
+        - rank
+        - restaurantId
+        - name
+        - cuisine
+        - rating
+        - estimatedCost
+        - reason
+      properties:
+        rank:
+          type: integer
+          minimum: 1
+        restaurantId:
+          type: string
+        name:
+          type: string
+        cuisine:
+          type: string
+        rating:
+          type: number
+          minimum: 0
+          maximum: 5
+        estimatedCost:
+          type: number
+          minimum: 0
+        reason:
+          type: string
+          minLength: 20
+
+    RecommendationResponse:
+      type: object
+      required:
+        - requestId
+        - recommendations
+        - usedFallback
+        - latencyMs
+      properties:
+        requestId:
+          type: string
+        recommendations:
+          type: array
+          minItems: 1
+          maxItems: 20
+          items:
+            $ref: "#/components/schemas/RecommendationItem"
+        summary:
+          type: string
+        usedFallback:
+          type: boolean
+        latencyMs:
+          type: integer
+          minimum: 0
+        metadata:
+          type: object
+          additionalProperties: true
+
+    FeedbackRequest:
+      type: object
+      additionalProperties: false
+      required:
+        - requestId
+        - rating
+      properties:
+        requestId:
+          type: string
+        rating:
+          type: string
+          enum: [up, down]
+        recommendationId:
+          type: string
+        comment:
+          type: string
+          maxLength: 500
+
+    AcceptedResponse:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+          example: accepted
+
+    ErrorResponse:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+          example: VALIDATION_ERROR
+        message:
+          type: string
+        details:
+          type: array
+          items:
+            type: object
+            additionalProperties: true

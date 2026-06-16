@@ -1,0 +1,25 @@
+# syntax=docker/dockerfile:1
+# Local / optional Docker deploy for Phase 8 personalization API.
+# Build from repo root: docker build -f Phase9/docker/Dockerfile.phase8 -t rrs-phase8 .
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY Phase8/backend/requirements.txt /app/Phase8/backend/requirements.txt
+RUN pip install --no-cache-dir -r /app/Phase8/backend/requirements.txt
+
+COPY . /app
+
+WORKDIR /app/Phase8/backend
+
+RUN mkdir -p /app/Phase8/backend/data
+
+ENV PYTHONUNBUFFERED=1
+ENV PHASE8_DATASET=/app/Phase1/outputs/restaurants_clean.csv
+EXPOSE 8002
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8002/api/v1/health')" || exit 1
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8002"]

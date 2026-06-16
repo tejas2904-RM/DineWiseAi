@@ -1,0 +1,27 @@
+field_mapping:
+  id: ["id", "restaurant_id", "res_id"]
+  name: ["name", "restaurant_name"]
+  location: ["location", "city", "locality"]
+  cuisine: ["cuisine", "cuisines"]
+  avg_cost_for_two: ["avg_cost_for_two", "average_cost_for_two", "cost_for_two", "approx_cost(for two people)"]
+  rating: ["rating", "aggregate_rating", "user_rating", "rate"]
+
+normalization:
+  location_aliases:
+    blr: bangalore
+    bengaluru: bangalore
+    ncr: delhi ncr
+    new delhi: delhi
+  cuisine_aliases:
+    n. indian: north indian
+    north-indian: north indian
+    south-indian: south indian
+    indo chinese: chinese
+  budget_thresholds:
+    low_max: 800
+    medium_max: 2000
+
+quality:
+  min_rating: 0.0
+  max_rating: 5.0
+  allow_missing_tags: true

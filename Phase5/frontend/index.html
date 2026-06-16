@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phase5 - Restaurant Recommendations</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Restaurant Recommendations</h1>
+        <p class="subtitle">Phase 5: Response Delivery and User Experience</p>
+      </header>
+
+      <section id="formSection">
+        <form id="prefForm" novalidate>
+          <div class="form-grid">
+            <label>
+              Location
+              <input id="location" name="location" type="text" placeholder="Bangalore" value="Bellandur" />
+              <small class="error" data-error-for="location"></small>
+            </label>
+
+            <label>
+              Budget
+              <select id="budget" name="budget">
+                <option value="">Select budget</option>
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+              <small class="error" data-error-for="budget"></small>
+            </label>
+
+            <label>
+              Cuisine
+              <input id="cuisine" name="cuisine" type="text" placeholder="Italian" value="any" />
+              <small class="error" data-error-for="cuisine"></small>
+            </label>
+
+            <label>
+              Minimum Rating (0 to 5)
+              <input id="minRating" name="minRating" type="number" min="0" max="5" step="0.1" value="4.0" />
+              <small class="error" data-error-for="minRating"></small>
+            </label>
+
+            <label class="full-width">
+              Additional Preferences (comma separated)
+              <input id="tags" name="tags" type="text" placeholder="family-friendly, quick-service" />
+            </label>
+          </div>
+
+          <div class="actions">
+            <button id="submitBtn" type="submit">Get Recommendations</button>
+            <button id="retryBtn" type="button" class="secondary hidden">Retry</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="loadingSection" class="hidden">
+        <div class="spinner"></div>
+        <p id="loadingText">Analyzing preferences...</p>
+        <div class="stages">
+          <div class="stage" data-stage="1">Capturing preferences</div>
+          <div class="stage" data-stage="2">Retrieving candidates</div>
+          <div class="stage" data-stage="3">Generating recommendations</div>
+        </div>
+      </section>
+
+      <section id="resultsSection" class="hidden">
+        <div id="fallbackBanner" class="fallback-banner hidden">
+          <strong>Fallback ranking used.</strong>
+          <span id="fallbackReason"></span>
+        </div>
+
+        <div class="results-header">
+          <p id="summaryText" class="summary"></p>
+          <div class="controls">
+            <div class="filter-group">
+              <label>Filter by cuisine:</label>
+              <div id="cuisineFilters" class="filter-pills"></div>
+            </div>
+            <div class="sort-group">
+              <label for="sortSelect">Sort by:</label>
+              <select id="sortSelect">
+                <option value="rank">Rank (default)</option>
+                <option value="ratingDesc">Rating: High to Low</option>
+                <option value="ratingAsc">Rating: Low to High</option>
+                <option value="costDesc">Cost: High to Low</option>
+                <option value="costAsc">Cost: Low to High</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="cardsContainer" class="cards"></div>
+
+        <div class="results-footer">
+          <button id="refineBtn" type="button" class="secondary">Refine Search</button>
+          <span id="metaText" class="meta"></span>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

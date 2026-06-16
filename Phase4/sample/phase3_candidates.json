@@ -1,0 +1,44 @@
+{
+  "preferences": {
+    "location": "bangalore",
+    "budget": "medium",
+    "cuisine": "italian",
+    "minRating": 4.0,
+    "tags": ["family-friendly", "quick-service"]
+  },
+  "candidates": [
+    {
+      "restaurant_id": "res_101",
+      "name": "Olive Corner",
+      "location": "bangalore",
+      "cuisine": "italian, continental",
+      "rating": 4.4,
+      "avg_cost_for_two": 1400,
+      "budget_band": "medium",
+      "score": 78.4,
+      "reason": "matches requested cuisine and good rating"
+    },
+    {
+      "restaurant_id": "res_205",
+      "name": "Pasta House",
+      "location": "bangalore",
+      "cuisine": "italian",
+      "rating": 4.2,
+      "avg_cost_for_two": 1200,
+      "budget_band": "medium",
+      "score": 74.0,
+      "reason": "solid cuisine and budget match"
+    },
+    {
+      "restaurant_id": "res_302",
+      "name": "Urban Spoon",
+      "location": "bangalore",
+      "cuisine": "mexican, italian",
+      "rating": 4.1,
+      "avg_cost_for_two": 1500,
+      "budget_band": "medium",
+      "score": 70.6,
+      "reason": "good optional preference overlap"
+    }
+  ]
+}

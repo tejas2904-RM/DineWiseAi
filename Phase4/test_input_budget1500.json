@@ -1,0 +1,99 @@
+{
+  "preferences": {
+    "location": "Bellandur",
+    "budget": "1500",
+    "cuisine": "any",
+    "minRating": 4.2,
+    "tags": []
+  },
+  "candidates": [
+    {
+      "restaurant_id": "b7",
+      "name": "Cafe Verde",
+      "location": "bellandur",
+      "cuisine": "italian",
+      "rating": 4.6,
+      "avg_cost_for_two": 1900.0,
+      "budget_band": "medium",
+      "score": 27.6,
+      "reason": "has rating 4.6"
+    },
+    {
+      "restaurant_id": "b1",
+      "name": "Olive Bistro",
+      "location": "bellandur",
+      "cuisine": "italian",
+      "rating": 4.4,
+      "avg_cost_for_two": 1800.0,
+      "budget_band": "medium",
+      "score": 26.4,
+      "reason": "has rating 4.4"
+    },
+    {
+      "restaurant_id": "b4",
+      "name": "Spice Courtyard",
+      "location": "bellandur",
+      "cuisine": "north indian",
+      "rating": 4.3,
+      "avg_cost_for_two": 1200.0,
+      "budget_band": "medium",
+      "score": 25.8,
+      "reason": "has rating 4.3"
+    },
+    {
+      "restaurant_id": "b10",
+      "name": "The Lakeview Kitchen",
+      "location": "bellandur",
+      "cuisine": "multi cuisine",
+      "rating": 4.3,
+      "avg_cost_for_two": 2000.0,
+      "budget_band": "medium",
+      "score": 25.8,
+      "reason": "has rating 4.3"
+    },
+    {
+      "restaurant_id": "b2",
+      "name": "Coastal Spoon",
+      "location": "bellandur",
+      "cuisine": "seafood",
+      "rating": 4.2,
+      "avg_cost_for_two": 2000.0,
+      "budget_band": "medium",
+      "score": 25.2,
+      "reason": "has rating 4.2"
+    },
+    {
+      "restaurant_id": "b8",
+      "name": "Biryani Hub",
+      "location": "bellandur",
+      "cuisine": "north indian",
+      "rating": 4.1,
+      "avg_cost_for_two": 900.0,
+      "budget_band": "medium",
+      "score": 24.6,
+      "reason": "has rating 4.1"
+    },
+    {
+      "restaurant_id": "b3",
+      "name": "Pasta Factory",
+      "location": "bellandur",
+      "cuisine": "italian",
+      "rating": 4.1,
+      "avg_cost_for_two": 1600.0,
+      "budget_band": "medium",
+      "score": 24.6,
+      "reason": "has rating 4.1"
+    },
+    {
+      "restaurant_id": "b5",
+      "name": "Wok Garden",
+      "location": "bellandur",
+      "cuisine": "chinese",
+      "rating": 4.0,
+      "avg_cost_for_two": 1500.0,
+      "budget_band": "medium",
+      "score": 24.0,
+      "reason": "has rating 4.0"
+    }
+  ]
+}

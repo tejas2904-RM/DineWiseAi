@@ -1,0 +1,54 @@
+{
+  "requestId": "a1b7dd0e-3f0a-4a7c-b932-fd39ed6c4259",
+  "recommendations": [
+    {
+      "rank": 1,
+      "restaurantId": "b7",
+      "name": "Cafe Verde",
+      "cuisine": "italian",
+      "rating": 4.6,
+      "estimatedCost": 1900.0,
+      "reason": "Cafe Verde has the highest rating of 4.6 in Bellandur and fits your medium budget"
+    },
+    {
+      "rank": 2,
+      "restaurantId": "b1",
+      "name": "Olive Bistro",
+      "cuisine": "italian",
+      "rating": 4.4,
+      "estimatedCost": 1800.0,
+      "reason": "Olive Bistro has a high rating of 4.4, serves Italian cuisine and is within your medium budget"
+    },
+    {
+      "rank": 3,
+      "restaurantId": "b10",
+      "name": "The Lakeview Kitchen",
+      "cuisine": "multi cuisine",
+      "rating": 4.3,
+      "estimatedCost": 2000.0,
+      "reason": "The Lakeview Kitchen has a rating of 4.3, offers multi cuisine and is suitable for your medium budget"
+    },
+    {
+      "rank": 4,
+      "restaurantId": "b4",
+      "name": "Spice Courtyard",
+      "cuisine": "north indian",
+      "rating": 4.3,
+      "estimatedCost": 1200.0,
+      "reason": "Spice Courtyard has a rating of 4.3, serves North Indian cuisine and is within your medium budget"
+    },
+    {
+      "rank": 5,
+      "restaurantId": "b2",
+      "name": "Coastal Spoon",
+      "cuisine": "seafood",
+      "rating": 4.2,
+      "estimatedCost": 2000.0,
+      "reason": "Coastal Spoon has a rating of 4.2, serves seafood and fits your medium budget"
+    }
+  ],
+  "summary": "Top recommendations in Bellandur with medium budget and high ratings",
+  "usedFallback": false,
+  "latencyMs": 32191,
+  "fallbackReason": null
+}

@@ -1,0 +1,23 @@
+# syntax=docker/dockerfile:1
+# Local / optional Docker deploy for Phase 7 gateway.
+# Build from repo root: docker build -f Phase9/docker/Dockerfile.phase7 -t rrs-phase7 .
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Full monorepo context required (Phase1 dataset, Phase3–6 modules, Phase4 .env optional)
+COPY Phase7/backend/requirements.txt /app/Phase7/backend/requirements.txt
+RUN pip install --no-cache-dir -r /app/Phase7/backend/requirements.txt
+
+COPY . /app
+
+WORKDIR /app/Phase7/backend
+
+ENV PYTHONUNBUFFERED=1
+EXPOSE 8001
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/v1/health')" || exit 1
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001"]

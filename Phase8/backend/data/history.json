@@ -1,0 +1,227 @@
+{
+  "user-8qsg8rot": [
+    {
+      "requestId": "69977d74-50c2-40ec-a89d-09c6cff2004d",
+      "timestamp": "2026-06-16T19:31:47.055723+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "race course road",
+      "budget": "medium",
+      "cuisine": "cafe",
+      "minRating": 3.0,
+      "recommendations": [
+        {
+          "rank": 1,
+          "restaurantId": "lush---renaissance-hotel-bengaluru::race-course-road",
+          "name": "Lush - Renaissance Hotel, Bengaluru",
+          "cuisine": "north indian, continental",
+          "rating": 4.5,
+          "estimatedCost": 1200.0,
+          "reason": "matches location and budget, high rating of 4.5"
+        },
+        {
+          "rank": 2,
+          "restaurantId": "the-london-curry-house---the-royale-senate-hotel::race-course-road",
+          "name": "The London Curry House - The Royale Senate Hotel",
+          "cuisine": "pizza, north indian, modern indian",
+          "rating": 4.5,
+          "estimatedCost": 1300.0,
+          "reason": "matches location and budget, high rating of 4.5"
+        },
+        {
+          "rank": 3,
+          "restaurantId": "r-bar---renaissance-hotel-bengaluru::race-course-road",
+          "name": "R Bar - Renaissance Hotel, Bengaluru",
+          "cuisine": "continental",
+          "rating": 4.2,
+          "estimatedCost": 1400.0,
+          "reason": "matches location, budget and has continental cuisine"
+        },
+        {
+          "rank": 4,
+          "restaurantId": "shaken-stirred::race-course-road",
+          "name": "Shaken & Stirred",
+          "cuisine": "continental, north indian, chinese",
+          "rating": 3.9,
+          "estimatedCost": 1500.0,
+          "reason": "matches location, budget and has continental cuisine"
+        },
+        {
+          "rank": 5,
+          "restaurantId": "south-ruchis-square::race-course-road",
+          "name": "South Ruchis Square",
+          "cuisine": "north indian, south indian, chinese",
+          "rating": 4.3,
+          "estimatedCost": 850.0,
+          "reason": "matches location and budget, high rating of 4.3"
+        }
+      ]
+    },
+    {
+      "requestId": "5098fb84-fcf0-401d-b0a2-359877c6a1aa",
+      "timestamp": "2026-06-16T19:31:24.242259+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "malleshwaram",
+      "budget": "medium",
+      "cuisine": "cafe",
+      "minRating": 3.0,
+      "recommendations": [
+        {
+          "rank": 1,
+          "restaurantId": "art-cafe::malleshwaram",
+          "name": "Art Cafe",
+          "cuisine": "cafe",
+          "rating": 3.5,
+          "estimatedCost": 1000.0,
+          "reason": "matches user's preferred location and cuisine, with a rating of 3.5 and medium budget"
+        },
+        {
+          "rank": 2,
+          "restaurantId": "cafe-coffee-day::malleshwaram",
+          "name": "Cafe Coffee Day",
+          "cuisine": "cafe, fast food",
+          "rating": 3.1,
+          "estimatedCost": 900.0,
+          "reason": "matches user's preferred location and cuisine, with a rating of 3.1 and medium budget"
+        }
+      ]
+    },
+    {
+      "requestId": "fc5c2641-ae6a-4140-8745-a4ba60adeb60",
+      "timestamp": "2026-06-16T19:31:04.571941+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "langford town",
+      "budget": "medium",
+      "cuisine": "cafe",
+      "minRating": 3.0,
+      "recommendations": [
+        {
+          "rank": 1,
+          "restaurantId": "throwback---pub-dine::langford-town",
+          "name": "ThrowBack - Pub & Dine",
+          "cuisine": "italian, north indian, continental",
+          "rating": 3.9,
+          "estimatedCost": 1000.0,
+          "reason": "matches user's location preference for langford town, has a medium budget band, and a rating of 3.9 which is above the minimum required rating of 3.0"
+        }
+      ]
+    },
+    {
+      "requestId": "f9122b72-aefd-4840-9b56-353a4c2bd289",
+      "timestamp": "2026-06-16T19:30:50.708591+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "langford town",
+      "budget": "medium",
+      "cuisine": "cafe",
+      "minRating": 4.0,
+      "recommendations": []
+    },
+    {
+      "requestId": "646a6886-6872-4fb6-a03e-48da353c0ca2",
+      "timestamp": "2026-06-16T19:30:21.769977+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "koramangala",
+      "budget": "medium",
+      "cuisine": "cafe",
+      "minRating": 4.0,
+      "recommendations": []
+    },
+    {
+      "requestId": "74b4b08f-7ef7-4051-b651-6c64f713ced7",
+      "timestamp": "2026-06-16T19:30:09.377732+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "koramangala",
+      "budget": "medium",
+      "cuisine": "chinese",
+      "minRating": 4.0,
+      "recommendations": []
+    },
+    {
+      "requestId": "c1926697-b66d-4bfe-9066-80a634884df7",
+      "timestamp": "2026-06-16T19:09:48.651885+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "bellandur",
+      "budget": "medium",
+      "cuisine": "chinese",
+      "minRating": 4.0,
+      "recommendations": [
+        {
+          "rank": 1,
+          "restaurantId": "tipsy-bull---the-bar-exchange::bellandur",
+          "name": "Tipsy Bull - The Bar Exchange",
+          "cuisine": "north indian, chinese, continental, mexican",
+          "rating": 4.4,
+          "estimatedCost": 1400.0,
+          "reason": "matches user's location and cuisine preference with a high rating of 4.4"
+        },
+        {
+          "rank": 2,
+          "restaurantId": "glassy::bellandur",
+          "name": "Glassy",
+          "cuisine": "north indian, chinese",
+          "rating": 4.2,
+          "estimatedCost": 1400.0,
+          "reason": "matches user's location and cuisine preference with a high rating of 4.2"
+        }
+      ]
+    },
+    {
+      "requestId": "4f40ed38-3dd0-4365-8aee-a14c1068f98e",
+      "timestamp": "2026-06-16T19:09:32.487056+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "bellandur",
+      "budget": "medium",
+      "cuisine": "biryani",
+      "minRating": 4.0,
+      "recommendations": [
+        {
+          "rank": 1,
+          "restaurantId": "bombay-brasserie::bellandur",
+          "name": "Bombay Brasserie",
+          "cuisine": "modern indian",
+          "rating": 4.3,
+          "estimatedCost": 1800.0,
+          "reason": "matches location and budget, has a high rating of 4.3, and serves modern Indian cuisine which is closest to biryani"
+        }
+      ]
+    },
+    {
+      "requestId": "fc759161-5911-4bd9-a724-0a103d81b0a5",
+      "timestamp": "2026-06-16T18:53:00.497341+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "bellandur",
+      "budget": "medium",
+      "cuisine": "Italian",
+      "minRating": 4.0,
+      "recommendations": [
+        {
+          "rank": 1,
+          "restaurantId": "bg-s-poolside-bar-grill::bellandur",
+          "name": "BG's Poolside Bar & Grill",
+          "cuisine": "mediterranean, italian, mexican",
+          "rating": 4.1,
+          "estimatedCost": 1600.0,
+          "reason": "matches user's preferred location, budget, and cuisine, with a rating of 4.1"
+        },
+        {
+          "rank": 2,
+          "restaurantId": "cafe-thulp::bellandur",
+          "name": "Cafe Thulp",
+          "cuisine": "cafe, burger, italian, salad",
+          "rating": 4.0,
+          "estimatedCost": 1000.0,
+          "reason": "matches user's preferred location, budget, and has italian cuisine, with a rating of 4.0"
+        }
+      ]
+    },
+    {
+      "requestId": "e7acce76-07c1-4ed8-b8ea-fcf8e9c1ef31",
+      "timestamp": "2026-06-16T18:52:20.979406+00:00",
+      "userId": "user-8qsg8rot",
+      "location": "central bangalore",
+      "budget": "medium",
+      "cuisine": "North Indian",
+      "minRating": 4.0,
+      "recommendations": []
+    }
+  ]
+}

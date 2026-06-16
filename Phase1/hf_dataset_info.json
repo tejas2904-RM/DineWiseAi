@@ -1,0 +1,29 @@
+{
+  "splits": [
+    "train"
+  ],
+  "splits_detail": {
+    "train": {
+      "rows": 51717,
+      "columns": [
+        "url",
+        "address",
+        "name",
+        "online_order",
+        "book_table",
+        "rate",
+        "votes",
+        "phone",
+        "location",
+        "rest_type",
+        "dish_liked",
+        "cuisines",
+        "approx_cost(for two people)",
+        "reviews_list",
+        "menu_item",
+        "listed_in(type)",
+        "listed_in(city)"
+      ]
+    }
+  }
+}

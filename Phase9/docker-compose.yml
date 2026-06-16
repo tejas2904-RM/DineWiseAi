@@ -1,0 +1,42 @@
+# Local stack mirroring Render topology (Phase 7 + Phase 8).
+# Run from repo root: docker compose -f Phase9/docker-compose.yml up --build
+
+services:
+  phase7:
+    build:
+      context: ..
+      dockerfile: Phase9/docker/Dockerfile.phase7
+    ports:
+      - "8001:8001"
+    environment:
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      GROQ_MODEL: ${GROQ_MODEL:-llama-3.3-70b-versatile}
+      CORS_ORIGINS: http://localhost:8082,http://localhost:3000
+    env_file:
+      - ../Phase4/.env
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/v1/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 45s
+
+  phase8:
+    build:
+      context: ..
+      dockerfile: Phase9/docker/Dockerfile.phase8
+    ports:
+      - "8002:8002"
+    depends_on:
+      phase7:
+        condition: service_healthy
+    environment:
+      PHASE7_BASE: http://phase7:8001
+      PHASE8_DEFAULT_KEY: phase7-demo-key
+      PHASE8_DATASET: /app/Phase1/outputs/restaurants_clean.csv
+      CORS_ORIGINS: http://localhost:8082,http://localhost:3000
+    volumes:
+      - phase8-data:/app/Phase8/backend/data
+
+volumes:
+  phase8-data:
